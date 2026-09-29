@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="canonical" href="https://raed-kan.github.io/raed-portfolio/projects/bp.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بندر بطاطا — محتوى وحملات وجلسات تصوير — رائد الحربي</title>
+  <meta name="description" content="محتوى بندر بطاطا: بوستات وستوريز، حملات المواسم، تطوير المنيو، وجلسات تصوير المنتجات بالذكاء الاصطناعي — مبنية على هوية العميل." />
+  <meta name="theme-color" content="#0A0C0A" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/images/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png" />
+  <meta property="og:url" content="https://raed-kan.github.io/raed-portfolio/projects/bp.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:site_name" content="رائد الحربي · كَان" />
+  <meta property="og:title" content="بندر بطاطا — محتوى وحملات وجلسات تصوير" />
+  <meta property="og:description" content="بوستات وستوريز وحملات موسمية ومنيو وجلسات تصوير بالذكاء الاصطناعي لبندر بطاطا." />
+  <meta property="og:image" content="https://raed-kan.github.io/raed-portfolio/assets/images/shoots/bp/32.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="بندر بطاطا — محتوى وحملات وجلسات تصوير" />
+  <meta name="twitter:image" content="https://raed-kan.github.io/raed-portfolio/assets/images/shoots/bp/32.jpg" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    .case-nav { position: fixed; top:0; inset-inline:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+      padding: 18px clamp(20px,5vw,64px); background: rgba(10,12,10,0.55); backdrop-filter: blur(14px); border-bottom:1px solid var(--line); }
+    .case-nav .logo-img { height:30px; width:auto; display:block; }
+    .case-back { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--ink-2); font-weight:500;
+      padding:8px 16px; border:1px solid var(--line-2); border-radius:999px; transition:all .35s var(--easing); }
+    .case-back:hover { color:var(--ink); border-color:var(--kaan-soft); background:rgba(145,172,143,0.06); }
+
+    .case-hero { position:relative; min-height:80vh; display:flex; align-items:flex-end; overflow:hidden; background:#F1BC30; }
+    .case-hero::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+      background:linear-gradient(to bottom, transparent 92%, var(--bg) 100%); }
+    /* هيرو متوسّط: عنوان في النص */
+    .hero-center { align-items:center; justify-content:center; text-align:center; }
+    .hero-center-inner { position:relative; z-index:2; padding:96px clamp(20px,5vw,64px) clamp(40px,7vh,80px); max-width:900px; }
+    .hero-center .case-eyebrow { justify-content:center; }
+    .hero-center .case-tags { justify-content:center; }
+    .case-hero-inner { position:relative; z-index:3; padding:0 clamp(20px,5vw,64px); max-width:1100px; }
+    /* هيرو أصفر: نص داكن متناسق */
+    .case-hero.hero-yellow .case-eyebrow { color:#B4231C; }
+    .case-hero.hero-yellow .case-eyebrow .dot { background:#B4231C; box-shadow:0 0 12px rgba(180,35,28,.45); }
+    .case-hero.hero-yellow h1 { color:#231a09; text-shadow:0 1px 0 rgba(255,255,255,0.12); }
+    .case-hero.hero-yellow .case-lede { color:#5a4a23; }
+    .case-hero.hero-yellow .case-tags span { color:#3a2f15; border-color:rgba(35,26,9,0.28); background:rgba(255,255,255,0.18); }
+    @media (max-width:860px){
+      .case-hero.hero-yellow { min-height:70vh; }
+    }
+    .case-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:22px; font-weight:600; }
+    .case-eyebrow .dot { width:6px; height:6px; border-radius:50%; background:var(--gold); box-shadow:0 0 12px var(--gold); }
+    .case-hero h1 { font-family:var(--font-display); font-weight:800; font-size:clamp(40px,8vw,92px); line-height:1.02; letter-spacing:-0.02em; color:var(--ink); margin-bottom:20px; }
+    .case-hero .case-lede { font-size:clamp(16px,2.2vw,21px); line-height:1.85; color:var(--ink-2); max-width:720px; font-weight:300; }
+    .hero-center .case-lede { margin-inline:auto; }
+    .case-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .case-tags span { font-size:12px; color:var(--ink-2); padding:7px 15px; border:1px solid var(--line-2); border-radius:999px; background:rgba(255,255,255,0.02); }
+
+    .case-intro { padding: clamp(64px,10vh,120px) clamp(20px,5vw,64px); max-width:920px; margin:0 auto; }
+    .case-intro .eyebrow { display:block; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--kaan-soft); margin-bottom:18px; font-weight:600; }
+    .case-intro h2 { font-family:var(--font-display); font-weight:700; font-size:clamp(26px,4vw,42px); line-height:1.25; color:var(--ink); margin-bottom:24px; letter-spacing:-0.01em; }
+    .case-intro p { font-size:clamp(15px,1.8vw,18px); line-height:2; color:var(--muted); font-weight:300; margin-bottom:18px; }
+    .case-intro p strong { color:var(--ink-2); font-weight:600; }
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--easing),transform .8s var(--easing)}
+    .reveal.in{opacity:1;transform:none}
+
+    .case-outro { text-align:center; padding: clamp(56px,9vh,110px) 24px clamp(56px,9vh,100px); border-top:1px solid var(--line); }
+    .case-outro .eyebrow { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--kaan-soft); }
+    .case-outro h2 { font-family:var(--font-display); font-weight:700; font-size:clamp(26px,4vw,44px); color:var(--ink); margin:16px 0 28px; line-height:1.2; }
+    .case-outro .btn-row { display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+
+    @media (max-width:640px){ .case-nav{padding:14px 18px} }
+
+    /* ===== أقسام السوشال/الستوري المتحركة ===== */
+    .bp-band { padding: clamp(40px,7vh,90px) clamp(20px,5vw,64px); }
+    .bp-band + .bp-band { border-top:1px solid var(--line); }
+    .bp-split { display:grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(24px,4vw,60px); max-width:1240px; margin:0 auto; align-items:start; }
+    .bp-split > * { min-width:0; }
+    .bp-desc { position:sticky; top:104px; }
+    .bp-desc .eyebrow { display:block; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--kaan-soft); margin-bottom:16px; font-weight:600; }
+    .bp-desc h2 { font-family:var(--font-display); font-weight:700; font-size:clamp(24px,3.4vw,40px); line-height:1.2; color:var(--ink); margin-bottom:18px; letter-spacing:-0.01em; }
+    .bp-desc p { font-size:clamp(15px,1.7vw,17px); line-height:1.95; color:var(--muted); font-weight:300; margin-bottom:14px; }
+    .bp-desc p strong { color:var(--ink-2); font-weight:600; }
+    .bp-desc .bp-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .bp-desc .bp-chips span { font-size:11.5px; color:var(--ink-2); padding:6px 13px; border:1px solid var(--line-2); border-radius:999px; }
+
+    .bp-marquee { display:grid; gap:14px; height:660px; overflow:hidden; cursor:pointer;
+      -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+      mask-image:linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%); }
+    .bp-marquee.cols-3 { grid-template-columns: repeat(3,minmax(0,1fr)); }
+    .bp-mcol { overflow:hidden; min-width:0; }
+    /* المسافة بين الصور margin (مو gap) عشان نص المسار = نسخة كاملة بالضبط وما يرجف عند اللفّة */
+    .bp-mtrack { display:flex; flex-direction:column; will-change:transform; animation: bpScroll var(--dur,46s) linear infinite; }
+    .bp-mcol:nth-child(2) .bp-mtrack { animation-direction: reverse; }
+    .bp-mtrack img { width:100%; height:auto; display:block; margin-bottom:14px; border-radius:14px; border:1px solid var(--line); background:var(--surface); }
+    @keyframes bpScroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+    /* توقّف بالمرور أو بالتركيز أو بالضغط، ولما يطلع القسم من الشاشة */
+    .bp-marquee:hover .bp-mtrack, .bp-marquee:focus-visible .bp-mtrack,
+    .bp-marquee.is-paused .bp-mtrack, .bp-marquee.is-off .bp-mtrack { animation-play-state: paused; }
+
+    /* ستوري بظل خفيف */
+    .bp-marquee.stories .bp-mtrack img { border-radius:18px; border:none; box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.4); }
+    .bp-marquee.stories { height:720px; }
+
+    /* المنيو: ٣ فيديوهات جنب بعض */
+    .bp-menu-vid { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; align-items:start; }
+    .bp-menu-vid figure { margin:0; }
+    .bp-menu-vid video { width:100%; height:auto; display:block; border-radius:14px; border:1px solid var(--line); background:var(--surface); box-shadow:var(--shadow-md); aspect-ratio:9/16; object-fit:cover; }
+    .bp-menu-vid figcaption { margin-top:10px; font-family:var(--font-display); font-size:12.5px; color:var(--kaan-soft); letter-spacing:.04em; text-align:center; }
+
+    @media (prefers-reduced-motion: reduce){ .bp-mtrack{ animation:none; } }
+    @media (max-width:860px){
+      .bp-split { grid-template-columns: 1fr; gap:20px; }
+      .bp-desc { position:static; }
+      .bp-menu-vid { gap:10px; }
+    }
+    @media (max-width:640px){
+      /* على الجوال: فيديو كبير يتسحب بدل ٣ فيديوهات صغيرة ما تنقرا */
+      .bp-menu-vid { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; gap:12px; padding-bottom:10px; }
+      .bp-menu-vid figure { flex:0 0 68%; scroll-snap-align:start; }
+    }
+    @media (max-width:480px){
+      .bp-band { padding:48px 16px; }
+    }
+
+    /* ===== v2: حقائق المشروع · القصة · الروابط · المشروع التالي ===== */
+    a:focus-visible, [tabindex]:focus-visible { outline:2px solid var(--kaan-soft); outline-offset:3px; }
+    .case-facts { max-width:1100px; margin:0 auto; padding: clamp(28px,5vh,48px) clamp(20px,5vw,64px) 0;
+      display:grid; grid-template-columns: minmax(0,1fr) minmax(0,.55fr) minmax(0,2fr) minmax(0,1.6fr); gap:20px clamp(20px,3vw,40px); }
+    .case-facts.no-year { grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,1.6fr); }
+    .case-facts > div { border-top:1px solid var(--line-2); padding-top:14px; }
+    .case-facts dt { font-size:12px; letter-spacing:.1em; color:var(--kaan-soft); font-weight:600; margin-bottom:6px; }
+    .case-facts dd { font-size:15px; line-height:1.8; color:var(--ink-2); }
+    .case-facts dd small { display:block; font-size:13px; line-height:1.7; color:var(--muted); margin-top:4px; }
+    @media (max-width:760px){
+      .case-facts, .case-facts.no-year { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .case-facts .f-wide, .case-facts.no-year .f-client { grid-column:1 / -1; }
+    }
+    @media (max-width:640px){ .case-facts { gap:14px 20px; } .case-facts dd { font-size:14px; } }
+    .case-intro { padding-top: clamp(40px,7vh,80px); }
+    .case-story { display:grid; gap:14px; }
+    .case-story > div { display:grid; grid-template-columns:72px minmax(0,1fr); gap:18px; align-items:baseline; padding-bottom:14px; border-bottom:1px solid var(--line); }
+    .case-story > div:last-child { border-bottom:0; padding-bottom:0; }
+    .case-story dt { font-size:13px; letter-spacing:.06em; color:var(--gold); font-weight:600; }
+    .case-story dd { font-size:clamp(15px,1.8vw,18px); line-height:1.9; color:var(--muted); font-weight:300; }
+    .case-story dd strong { color:var(--ink-2); font-weight:600; }
+    @media (max-width:520px){ .case-story > div { grid-template-columns:1fr; gap:4px; } }
+    .case-links { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:26px; }
+    .case-links + .case-links { margin-top:12px; }
+    .case-links .lbl { font-size:13px; color:var(--muted); margin-inline-end:4px; }
+    .case-links a { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--ink-2); padding:9px 16px; border:1px solid var(--line-2); border-radius:999px; transition:border-color .3s var(--easing), color .3s var(--easing), background .3s var(--easing); }
+    .case-links a:hover { color:var(--ink); border-color:var(--kaan-soft); background:rgba(145,172,143,0.06); }
+    .case-next { padding: 0 clamp(20px,5vw,64px) clamp(48px,8vh,88px); }
+    .next-card { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:minmax(0,220px) minmax(0,1fr) auto; align-items:center; gap:clamp(16px,3vw,32px);
+      padding:14px; border:1px solid var(--line-2); border-radius:var(--radius); background:var(--surface); transition:border-color .35s var(--easing), background .35s var(--easing); }
+    .next-card:hover { border-color:var(--kaan-soft); background:var(--surface-2); }
+    .next-img { display:block; aspect-ratio:16/10; border-radius:var(--radius-sm); overflow:hidden; background:var(--bg-alt); }
+    .next-img img { width:100%; height:100%; object-fit:cover; }
+    .next-label { display:block; font-size:12px; letter-spacing:.12em; color:var(--kaan-soft); font-weight:600; margin-bottom:6px; }
+    .next-title { display:block; font-family:var(--font-display); font-weight:700; font-size:clamp(20px,2.8vw,32px); color:var(--ink); line-height:1.25; }
+    .next-meta { display:block; font-size:14px; color:var(--muted); margin-top:6px; }
+    .next-arrow { font-size:26px; line-height:1; color:var(--kaan-soft); padding-inline-end:12px; transition:transform .35s var(--easing); }
+    .next-card:hover .next-arrow { transform:translateX(-6px); }
+    @media (max-width:560px){ .next-card { grid-template-columns:104px minmax(0,1fr) auto; gap:14px; padding:10px; } .next-arrow { padding-inline-end:4px; } }
+    @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } }
+
+    /* الجوال + «تقليل الحركة»: شريط سحب أفقي بدل الحركة التلقائية (آخر شي عشان يغلب قواعد الشبكة) */
+    .bp-marquee.is-strip { display:flex; align-items:flex-start; gap:12px; height:auto; overflow-x:auto; overflow-y:hidden; cursor:auto;
+      scroll-snap-type:x mandatory; overscroll-behavior-x:contain; -webkit-mask-image:none; mask-image:none; padding-bottom:12px; scrollbar-width:thin; }
+    .bp-marquee.is-strip > img { flex:0 0 auto; width:var(--strip-w,70%); max-width:none; height:auto; scroll-snap-align:start;
+      border-radius:14px; border:1px solid var(--line); background:var(--surface); }
+    .bp-marquee.is-strip.strip-h > img { height:var(--strip-h,300px); width:auto; }
+  </style>
+</head>
+<body>
+
+  <nav class="case-nav">
+    <a href="../index.html" class="logo" aria-label="الرئيسية"><img src="../assets/images/brand/kaan-logo-white.png" alt="كَان" class="logo-img" width="81" height="30" decoding="async" /></a>
+    <a href="../index.html#work" class="case-back"><span aria-hidden="true">→</span><span>رجوع للأعمال</span></a>
+  </nav>
+
+  <!-- الهيرو -->
+  <header class="case-hero hero-yellow hero-center">
+    <div class="hero-center-inner">
+      <span class="case-eyebrow"><span class="dot"></span> سوشال وحملات · تصوير · فيديو</span>
+      <h1>بطاطا تُؤكل بالعين<br/>قبل الفم.</h1>
+      <p class="case-lede">
+        أصمّم محتوى بندر بطاطا: بوستات وستوريز، حملات المواسم، المنيو،
+        وجلسات تصوير المنتجات.
+      </p>
+      <div class="case-tags">
+        <span>سوشال</span>
+        <span>ستوري</span>
+        <span>حملات موسمية</span>
+        <span>منيو</span>
+        <span>جلسات تصوير</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- حقائق المشروع -->
+  <dl class="case-facts">
+    <div class="f-client"><dt>العميل</dt><dd>بندر بطاطا</dd></div>
+    <div><dt>السنة</dt><dd>2025 — 2026</dd></div>
+    <div class="f-wide"><dt>دوري</dt><dd>المحتوى والسوشال، الحملات الموسمية (منها توجه الصيف وكأس العالم)، تطوير المنيو، وجلسات التصوير والفيديو بالذكاء الاصطناعي.<small>الشعار والشخصية والهوية الأساسية من العميل.</small></dd></div>
+    <div class="f-wide"><dt>المخرجات</dt><dd>بوستات · ستوريز · منيو للشاشات والطباعة · جلسات تصوير</dd></div>
+  </dl>
+
+  <!-- المشروع -->
+  <section class="case-intro">
+    <span class="eyebrow">المشروع</span>
+    <h2>كل موسم له بوست،<br/>وكل بوست يشبه بندر.</h2>
+    <dl class="case-story">
+      <div><dt>التحدي</dt><dd>براند شخصيته مرحة وجمهوره واسع، ويحتاج محتوى ما يوقف: رمضان، العيد، يوم التأسيس، المباريات، والعروض.</dd></div>
+      <div><dt>الفكرة</dt><dd>أشتغل على شخصية البراند وألوانه كما هي، وأغيّر الفكرة مع كل موسم: فانوس في رمضان، ملعب في المباريات، وثلج في الشتاء.</dd></div>
+      <div><dt>النتيجة</dt><dd>حساب يتعرّف عليه المتابع من أول تمريرة، ومنيو تطوّر من نسخة 2025 إلى 2026، وصور منتجات من جلسات <strong>بدون استوديو</strong>.</dd></div>
+    </dl>
+    <div class="case-links">
+      <a href="../ai-gallery.html#bp">شاهد جلسة التصوير كاملة <span aria-hidden="true">←</span></a>
+      <a href="../ai-gallery.html#video">شاهد مقاطع قبل وبعد <span aria-hidden="true">←</span></a>
+    </div>
+    <div class="case-links">
+      <span class="lbl">تعاونات بندر بطاطا من تصميمي:</span>
+      <a href="boulevard.html">البوليفارد</a>
+      <a href="winter.html">ونتر وندرلاند</a>
+      <a href="vox.html">VOX</a>
+    </div>
+  </section>
+
+  <!-- السوشال ميديا -->
+  <section class="bp-band reveal" id="bp-social">
+    <div class="bp-split">
+      <div class="bp-desc">
+        <span class="eyebrow">السوشال ميديا</span>
+        <h2>المناسبة تتغيّر، والبطاطا في النص.</h2>
+        <p>رمضان، العيد، يوم التأسيس، مباريات المنتخب، حملات التوعية، والعروض — كل مناسبة بفكرة تخصها، والمنتج واضح في كل تصميم.</p>
+        <div class="bp-chips">
+          <span>العيد</span><span>اليوم الوطني</span><span>كأس العالم</span><span>رمضان</span><span>تندر الدجاج</span><span>وجبة الأطفال</span><span>المنتخب</span><span>حملات توعية</span>
+        </div>
+      </div>
+      <div class="bp-marquee cols-3" id="postsMarquee" role="region" aria-label="بوستات بندر بطاطا"></div>
+    </div>
+  </section>
+
+  <!-- الستوري -->
+  <section class="bp-band reveal" id="bp-stories">
+    <div class="bp-split">
+      <div class="bp-desc">
+        <span class="eyebrow">الستوري</span>
+        <h2>ستوريز للمعلومة السريعة.</h2>
+        <p>أوقات العمل، تطبيقات التوصيل، الكاش باك، والمناسبات — رسالة وحدة في كل ستوري، تنقرا في ثانيتين.</p>
+        <div class="bp-chips">
+          <span>عروض</span><span>أوقات العمل</span><span>برامج التوصيل</span><span>كاش باك</span><span>مناسبات</span>
+        </div>
+      </div>
+      <div class="bp-marquee cols-3 stories" id="storiesMarquee" role="region" aria-label="ستوريز بندر بطاطا"></div>
+    </div>
+  </section>
+
+  <!-- المنيو -->
+  <section class="bp-band reveal" id="bp-menu">
+    <div class="bp-split">
+      <div class="bp-desc">
+        <span class="eyebrow">المنيو</span>
+        <h2>منيو يتطوّر سنةً بعد سنة.</h2>
+        <p>من نسخة <strong>2025</strong> إلى نسخة <strong>2026</strong>: رتّبت الأصناف من جديد، ووضّحت الأسعار، وسهّلت القراءة — والروح المرحة نفسها.</p>
+        <p>مصمّم لشاشات الفروع (٥٥ و٤٣ بوصة) وللطباعة.</p>
+      </div>
+      <div class="bp-menu-vid">
+        <figure>
+          <video src="../assets/images/projects/bp/menu-vid/menu26-full.mp4" width="540" height="960" loop muted playsinline preload="metadata" aria-label="منيو بندر بطاطا 2026 على شاشة الفرع — المنيو الكامل"></video>
+          <figcaption>المنيو الكامل</figcaption>
+        </figure>
+        <figure>
+          <video src="../assets/images/projects/bp/menu-vid/menu26-special.mp4" width="540" height="960" loop muted playsinline preload="metadata" aria-label="منيو بندر بطاطا 2026 — شاشة الجديد والمميّز"></video>
+          <figcaption>الجديد والمميّز</figcaption>
+        </figure>
+        <figure>
+          <video src="../assets/images/projects/bp/menu-vid/menu26-items.mp4" width="540" height="960" loop muted playsinline preload="metadata" aria-label="منيو بندر بطاطا 2026 — شاشة لكل صنف"></video>
+          <figcaption>كل صنف لحاله</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- تواصل -->
+  <section class="case-outro">
+    <span class="eyebrow">تواصل</span>
+    <h2>براندك يحتاج محتوى يلحق المواسم؟</h2>
+    <div class="btn-row">
+      <a href="../index.html#contact" class="btn btn-primary"><span>تواصل معي</span><span class="btn-arrow">↗</span></a>
+      <a href="../index.html#work" class="btn btn-ghost">كل الأعمال</a>
+    </div>
+  </section>
+
+  <!-- المشروع التالي -->
+  <nav class="case-next" aria-label="المشروع التالي">
+    <a class="next-card" href="flatty.html">
+      <span class="next-img"><img src="../assets/images/cards/flatty.jpg" width="900" height="600" alt="فلاتي باتي — برجر وبطاطس على كرسي بخلفية بنفسجية" loading="lazy" decoding="async" /></span>
+      <span>
+        <span class="next-label">المشروع التالي</span>
+        <span class="next-title">فلاتي باتي</span>
+        <span class="next-meta">سوشال · تصوير منتجات</span>
+      </span>
+      <span class="next-arrow" aria-hidden="true">←</span>
+    </a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="../assets/images/brand/kaan-logo-white.png" alt="كَان" class="footer-mark-img" width="76" height="28" loading="lazy" decoding="async" /><span class="footer-tag">كل حكاية تبدأ بكَان</span></div>
+      <div class="footer-meta"><p>© 2026 رائد الحربي · جميع الحقوق محفوظة.</p><p class="muted">الرياض</p></div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== المعارض المتحركة =====
+    // تنبني لما يقرب القسم من الشاشة (ما تحمّل كل الصور أول ما تنفتح الصفحة)،
+    // وتوقف بالمرور أو الضغط، وعلى الجوال أو مع «تقليل الحركة» تصير شريط سحب أفقي.
+    (() => {
+      const SPEED = 42;   // px/ث — سرعة موحّدة لكل الشرائط
+      const GAP = 14;     // = margin-bottom للصور في CSS
+      const COL = 'bp-mcol', TRACK = 'bp-mtrack';
+      const BASE = '../assets/images/projects/bp/';
+      const P = 'بندر بطاطا — ';
+      const GROUPS = [
+        { id:'postsMarquee', cols:3, stripH:'clamp(240px,72vw,340px)', items:[
+          ['social/post-000.jpg',720,900,P+'أطفال بتيجان يأكلون وجبتهم في قاعة قصر'],
+          ['social/post-001.jpg',720,900,P+'يد الشخصية تضع تاجاً من البطاطس على رأس بنت'],
+          ['social/post-002.jpg',506,900,P+'بوست «تم تعبئة الكرش بالبطاط»'],
+          ['social/post-003.jpg',720,900,P+'بوست «أهلاً رمضان» والشخصية تحمل فانوساً'],
+          ['social/post-004.jpg',720,900,P+'وجه الشخصية مع كلمة «دجاج»'],
+          ['social/post-005.jpg',720,900,P+'وجه الشخصية مع سؤال «توقع إيش؟»'],
+          ['social/post-006.jpg',720,900,P+'وجه الشخصية مع كلمة «بندريتا»'],
+          ['social/post-007.jpg',720,900,P+'سلايدرز برجر على خلفية صفراء'],
+          ['social/post-008.jpg',720,900,P+'بوست «Pixel Box» لبرجر البكسل'],
+          ['social/post-009.jpg',720,900,P+'موظف يقدّم صينية الطلب'],
+          ['social/post-010.jpg',506,900,P+'بوست «يوم بدينا» ليوم التأسيس'],
+          ['social/post-011.jpg',721,900,P+'بوست «جاكم الإعصار» للمنتخب'],
+          ['social/post-012.jpg',720,900,P+'بوست «إنت بطل» للبطاطا الذهبية'],
+          ['social/post-013.jpg',720,900,P+'قرد صغير أمام «بوكس الجمعات» في الغابة'],
+          ['social/post-014.jpg',721,900,P+'بوست توعية عن الشريط الوردي'],
+          ['social/post-015.jpg',721,900,P+'الشخصية داخل الشريط الوردي'],
+          ['social/post-016.jpg',721,900,P+'بوست «قوتك في وعيك»'],
+          ['social/post-017.jpg',720,900,P+'بوست العودة للمدارس «بعد المدرسة.. يلا بندر بطاطا»'],
+          ['social/post-018.jpg',506,900,P+'بوست «مين بيفوز بالسوبر بطاطا؟»'],
+          ['social/post-019.jpg',720,900,P+'شيت ستيكرات «جمّعها وخذ بطاطا مجاناً»'],
+          ['social/post-020.jpg',506,900,P+'بوست «ساعد بندر بطاطا»'],
+          ['social/post-021.jpg',720,900,P+'علب بطاطس بجانب كرة قدم أمريكية'],
+          ['social/post-022.jpg',720,900,P+'خزائن مدرسية عليها ستيكرات USA Edition'],
+          ['social/post-023.jpg',720,900,P+'الشخصية بملابس شتوية تذاكر على مكتب'],
+          ['social/post-024.jpg',720,900,P+'الشخصية أمام شاشة London Fries'],
+          ['social/post-025.jpg',720,900,P+'طبق London Fries على الثلج'],
+        ]},
+        { id:'storiesMarquee', cols:3, stripH:'clamp(300px,90vw,420px)', items:[
+          ['stories/story-000.jpg',620,1103,P+'ستوري «صرنا متوفرين في كيتا»'],
+          ['stories/story-001.jpg',620,1102,P+'ستوري تطبيقات الطلب'],
+          ['stories/story-002.jpg',620,1101,P+'ستوري «تلقونا على كل هالتطبيقات»'],
+          ['stories/story-003.jpg',620,1101,P+'ستوري شعارات تطبيقات التوصيل'],
+          ['stories/story-004.jpg',620,1102,P+'ستوري أوقات العمل في العيد'],
+          ['stories/story-005.jpg',620,1102,P+'ستوري أوقات العمل'],
+          ['stories/story-006.jpg',620,1102,P+'ستوري كاش باك ١٠٪ على جاهز'],
+          ['stories/story-007.jpg',620,1102,P+'ستوري توقعات مباراة الافتتاح'],
+          ['stories/story-008.jpg',620,1102,P+'ستوري الشتاء والشخصية بملابس شتوية'],
+          ['stories/story-009.jpg',620,1102,P+'ستوري ونتر وندرلاند'],
+          ['stories/story-010.jpg',620,775,P+'ستوري أصناف الهوت دوق'],
+          ['stories/story-011.jpg',620,775,P+'لاعب كرة قدم أمريكية مع هوت دوق'],
+        ]},
+      ];
+      const staticMQ = window.matchMedia('(max-width: 760px), (prefers-reduced-motion: reduce)');
+      const built = new Map();
+
+      function img(it, hidden, lazy){
+        const im = document.createElement('img');
+        im.src = BASE + it[0]; im.width = it[1]; im.height = it[2]; im.decoding = 'async';
+        if (lazy) im.loading = 'lazy';
+        if (hidden){ im.alt = ''; im.setAttribute('aria-hidden', 'true'); } else { im.alt = it[3]; }
+        return im;
+      }
+      function build(g){
+        const wrap = document.getElementById(g.id); if (!wrap) return;
+        const isStatic = staticMQ.matches;
+        wrap.textContent = '';
+        wrap.classList.toggle('is-strip', isStatic);
+        wrap.classList.remove('is-paused');
+        if (isStatic){
+          wrap.removeAttribute('title');
+          // شريط بارتفاع موحّد للصور الطولية (stripH)، وبعرض موحّد للبنرات العريضة (strip)
+          wrap.classList.toggle('strip-h', !!g.stripH);
+          if (g.stripH) wrap.style.setProperty('--strip-h', g.stripH); else wrap.style.setProperty('--strip-w', g.strip);
+          g.items.forEach(it => wrap.appendChild(img(it, false, true)));
+        } else {
+          wrap.title = 'اضغط لإيقاف الحركة أو تشغيلها';
+          const colW = Math.max(120, (wrap.clientWidth - GAP * (g.cols - 1)) / g.cols);
+          const need = (wrap.clientHeight || 660) * 1.1;
+          const buckets = Array.from({length: g.cols}, () => []);
+          g.items.forEach((it, i) => buckets[i % g.cols].push(it));
+          buckets.forEach(items => {
+            if (!items.length) return;
+            const col = document.createElement('div'); col.className = COL;
+            const track = document.createElement('div'); track.className = TRACK;
+            // كرّر العناصر لين يعبّي العمود، ثم ضاعفه للّف السلس (النسخ المكررة مخفية عن قارئ الشاشة)
+            let base = [], h = 0;
+            while (h < need) items.forEach(it => { base.push(it); h += colW * it[2] / it[1] + GAP; });
+            [...base, ...base].forEach((it, k) => track.appendChild(img(it, k >= items.length, false)));
+            col.appendChild(track); wrap.appendChild(col);
+            track.style.animationDuration = (h / SPEED) + 's';
+          });
+        }
+        built.set(g.id, isStatic);
+      }
+
+      const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(en => {
+        const g = GROUPS.find(x => x.id === en.target.id);
+        if (en.isIntersecting && !built.has(g.id)) build(g);
+        en.target.classList.toggle('is-off', !en.isIntersecting);
+      }), { rootMargin: '300px 0px' }) : null;
+
+      GROUPS.forEach(g => {
+        const wrap = document.getElementById(g.id); if (!wrap) return;
+        wrap.tabIndex = 0;
+        const toggle = () => { if (!wrap.classList.contains('is-strip')) wrap.classList.toggle('is-paused'); };
+        wrap.addEventListener('click', toggle);
+        wrap.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { if (!wrap.classList.contains('is-strip')) { e.preventDefault(); toggle(); } } });
+        if (staticMQ.matches || !io) build(g);   // الشريط الأفقي صوره lazy أصلاً
+        if (io) io.observe(wrap);
+      });
+      const onChange = () => built.forEach((wasStatic, id) => { if (wasStatic !== staticMQ.matches) build(GROUPS.find(x => x.id === id)); });
+      if (staticMQ.addEventListener) staticMQ.addEventListener('change', onChange); else if (staticMQ.addListener) staticMQ.addListener(onChange);
+    })();
+
+    // ===== فيديوهات المنيو: تشتغل لما تظهر وتوقف لما تختفي، ومع «تقليل الحركة» يدوي =====
+    (() => {
+      const vids = document.querySelectorAll('.bp-menu-vid video');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { vids.forEach(v => { v.controls = true; }); return; }
+      const io = new IntersectionObserver(entries => entries.forEach(en => {
+        const v = en.target;
+        if (en.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => { v.controls = true; }); }
+        else v.pause();
+      }), { threshold: 0.25 });
+      vids.forEach(v => io.observe(v));
+    })();
+
+    (() => {
+      const els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(e => io.observe(e));
+    })();
+  </script>
+
+</body>
+</html>
