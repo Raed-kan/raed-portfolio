@@ -1,12 +1,9 @@
 /* رائد · بورتفوليو · home.js — خاص بالرئيسية:
    ١) شبكة «التصوير والفيديو» من window.SHOOTS (+ بطاقة قبل/بعد من window.VIDEOS إن وُجد)
    ٢) فلاتر «الأعمال»: إخفاء/إظهار + تبديل الغلاف والرابط حسب الخدمة
-   ٣) زر واتساب (يظهر فقط إذا تعبّى الرقم) */
+   (زر واتساب صار رابط ثابت في index.html — قسم التواصل) */
 (() => {
   'use strict';
-
-  /* رقم واتساب بالصيغة الدولية بدون + أو أصفار (مثال: '9665XXXXXXXX'). فاضي = الزر ما يظهر. */
-  const WHATSAPP_NUMBER = '';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -292,20 +289,6 @@
     });
   }
 
-  /* ---------- ٣) واتساب ---------- */
-
-  function initWhatsApp() {
-    const digits = String(WHATSAPP_NUMBER || '').replace(/\D/g, '');
-    const box = document.getElementById('contactActions');
-    if (!digits || !box) return;
-    const a = el('a', 'btn btn-ghost btn-lg', 'واتساب');
-    a.href = 'https://wa.me/' + digits;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    box.appendChild(a);
-  }
-
   buildShots();
   initFilters();
-  initWhatsApp();
 })();

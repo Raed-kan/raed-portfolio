@@ -809,6 +809,7 @@ section { padding: var(--section-pad) 0; position: relative; }
   padding-bottom: 2px;
 }
 .contact-mail:hover { color: var(--ink); border-color: var(--kaan-soft); }
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 26px; }
 
 /* ===== Footer (مشترك) ===== */
 .site-footer {
