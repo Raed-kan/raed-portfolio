@@ -103,6 +103,9 @@
     .next-card:hover .next-arrow { transform:translateX(-6px); }
     @media (max-width:560px){ .next-card { grid-template-columns:104px minmax(0,1fr) auto; gap:14px; padding:10px; } .next-arrow { padding-inline-end:4px; } }
     @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } }
+    /* الهيرو: مساحة لشريط التنقّل الثابت (عشان العنوان ما ينحشر تحته في الشاشات القصيرة) */
+    .case-hero { padding-top:88px; }
+    @media (max-width:640px){ .case-hero { padding-top:80px; } }
   </style>
 </head>
 <body>

@@ -132,6 +132,11 @@
     .reef-roll.is-strip > img { flex:0 0 auto; width:var(--strip-w,70%); max-width:none; height:auto; scroll-snap-align:start;
       border-radius:12px; border:1px solid var(--line); background:var(--surface); }
     .reef-roll.is-strip.strip-h > img { height:var(--strip-h,300px); width:auto; }
+    /* الهيرو: مساحة لشريط التنقّل الثابت (عشان العنوان ما ينحشر تحته في الشاشات القصيرة) */
+    .case-hero { padding-top:88px; }
+    @media (max-width:640px){ .case-hero { padding-top:80px; } }
+    /* السطر الذهبي الصغير فوق العنوان: خلفية خفيفة عشان ينقرا فوق أي صورة */
+    .case-hero .case-eyebrow { background:rgba(10,12,10,.6); padding:4px 12px; border-radius:999px; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
   </style>
 </head>
 <body>
