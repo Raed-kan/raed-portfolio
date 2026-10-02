@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <link rel="canonical" href="https://raed-portfolio.pages.dev/projects/bp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>بندر بطاطا — محتوى وحملات وجلسات تصوير — رائد الحربي</title>
-  <meta name="description" content="محتوى بندر بطاطا: بوستات وستوريز، حملات المواسم، تطوير المنيو، وجلسات تصوير المنتجات بالذكاء الاصطناعي — مبنية على هوية العميل." />
+  <title>بندر بطاطا — سوشال وحملات — رائد الحربي</title>
+  <meta name="description" content="تصاميم السوشال والحملات الموسمية ومنيو الفروع وجلسات تصوير المنتجات والفيديو لبندر بطاطا." />
   <meta name="theme-color" content="#0A0C0A" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="../assets/images/brand/favicon-32.png" />
@@ -14,12 +14,12 @@
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:site_name" content="رائد الحربي · كَان" />
-  <meta property="og:title" content="بندر بطاطا — محتوى وحملات وجلسات تصوير" />
-  <meta property="og:description" content="بوستات وستوريز وحملات موسمية ومنيو وجلسات تصوير بالذكاء الاصطناعي لبندر بطاطا." />
-  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/shoots/bp/32.jpg" />
+  <meta property="og:title" content="بندر بطاطا — سوشال وحملات" />
+  <meta property="og:description" content="تصاميم السوشال والحملات الموسمية ومنيو الفروع وجلسات تصوير المنتجات والفيديو لبندر بطاطا." />
+  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/projects/bp/bp-hero-pixel-1920.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="بندر بطاطا — محتوى وحملات وجلسات تصوير" />
-  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/shoots/bp/32.jpg" />
+  <meta name="twitter:title" content="بندر بطاطا — سوشال وحملات" />
+  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/projects/bp/bp-hero-pixel-1920.jpg" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <style>
     .case-nav { position: fixed; top:0; inset-inline:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
@@ -170,6 +170,28 @@
     .bp-marquee.is-strip > img { flex:0 0 auto; width:var(--strip-w,70%); max-width:none; height:auto; scroll-snap-align:start;
       border-radius:14px; border:1px solid var(--line); background:var(--surface); }
     .bp-marquee.is-strip.strip-h > img { height:var(--strip-h,300px); width:auto; }
+    @media (max-width:860px){
+    }
+    /* السطر الصغير فوق العنوان صار فيه اسم العلامة بالعربي: بدون تباعد حروف عشان ما ينكسر اتصالها */
+    .case-hero .case-eyebrow { letter-spacing:0; }
+    /* الهيرو الموحّد (مثل VOX وTECNO): صورة كبيرة بعرض الصفحة وظل من تحت */
+    .case-hero.hero-photo { position:relative; min-height:max(82vh,560px); display:flex; align-items:flex-end; overflow:hidden; background:#0A0C0A; padding-top:88px; }
+    .case-hero.hero-photo > picture { display:contents; }
+    .case-hero.hero-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%; z-index:0; }
+    .case-hero.hero-photo::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:
+        linear-gradient(to top, var(--bg) 2%, rgba(10,12,10,.72) 26%, rgba(10,12,10,.18) 56%, rgba(10,12,10,.45) 100%),
+        linear-gradient(to left, rgba(10,12,10,.55), rgba(10,12,10,0) 50%); }
+    .case-hero.hero-photo .case-hero-inner { position:relative; z-index:2; padding:0 clamp(20px,5vw,64px) clamp(44px,8vh,88px); max-width:1100px; }
+    .case-hero.hero-photo h1 { color:var(--ink); }
+    .case-hero.hero-photo .case-lede { color:var(--ink-2); }
+    .case-hero.hero-photo .case-eyebrow { color:var(--gold); background:rgba(10,12,10,.6); padding:4px 12px; border-radius:999px; }
+    .case-hero.hero-photo .case-eyebrow .dot { background:var(--gold); box-shadow:0 0 12px var(--gold); }
+    .case-hero.hero-photo .case-tags span { color:var(--ink-2); border-color:var(--line-2); background:rgba(10,12,10,.45); }
+    @media (max-width:640px){
+      .case-hero.hero-photo { min-height:max(74vh,520px); padding-top:80px; }
+      .case-hero.hero-photo img { object-position:50% 50%; }
+      .case-hero.hero-photo::after { background:linear-gradient(to top, var(--bg) 6%, rgba(10,12,10,.86) 42%, rgba(10,12,10,.3) 72%, rgba(10,12,10,.55) 100%); }
+    }
   </style>
 </head>
 <body>
@@ -180,13 +202,16 @@
   </nav>
 
   <!-- الهيرو -->
-  <header class="case-hero hero-yellow hero-center">
-    <div class="hero-center-inner">
-      <span class="case-eyebrow"><span class="dot"></span> سوشال وحملات · تصوير · فيديو</span>
-      <h1>بطاطا تُؤكل بالعين<br/>قبل الفم.</h1>
+  <header class="case-hero hero-photo">
+    <picture>
+      <source media="(max-width: 640px)" srcset="../assets/images/projects/bp/bp-hero-pixel-m.jpg" width="1020" height="1536" />
+      <img src="../assets/images/projects/bp/bp-hero-pixel-1920.jpg" srcset="../assets/images/projects/bp/bp-hero-pixel-1920.jpg 1920w, ../assets/images/projects/bp/bp-hero-pixel.jpg 2688w" sizes="100vw" width="2688" height="1536" fetchpriority="high" decoding="async" alt="برجر «Pixel Box» من بندر بطاطا مصفوفة من فوق على خلفية صفراء" />
+    </picture>
+    <div class="case-hero-inner">
+      <span class="case-eyebrow"><span class="dot"></span>  بندر بطاطا · سوشال وحملات · منيو · صور وفيديو</span>
+      <h1>تتغيّر المواسم،<br/>ويبقى بندر بندر.</h1>
       <p class="case-lede">
-        أصمّم محتوى بندر بطاطا: بوستات وستوريز، حملات المواسم، المنيو،
-        وجلسات تصوير المنتجات.
+        تصميم محتوى السوشال والحملات الموسمية ومنيو الفروع لبندر بطاطا، مع جلسات تصوير للمنتجات ومقاطع فيديو.
       </p>
       <div class="case-tags">
         <span>سوشال</span>
@@ -200,27 +225,27 @@
 
   <!-- حقائق المشروع -->
   <dl class="case-facts">
-    <div class="f-client"><dt>العميل</dt><dd>بندر بطاطا</dd></div>
+    <div class="f-client"><dt>العلامة</dt><dd>بندر بطاطا</dd></div>
     <div><dt>السنة</dt><dd>2025 — 2026</dd></div>
-    <div class="f-wide"><dt>دوري</dt><dd>المحتوى والسوشال، الحملات الموسمية (منها توجه الصيف وكأس العالم)، تطوير المنيو، وجلسات التصوير والفيديو بالذكاء الاصطناعي.<small>الشعار والشخصية والهوية الأساسية من العميل.</small></dd></div>
-    <div class="f-wide"><dt>المخرجات</dt><dd>بوستات · ستوريز · منيو للشاشات والطباعة · جلسات تصوير</dd></div>
+    <div class="f-wide"><dt>نطاق العمل</dt><dd>تصميم البوستات والستوريز، والحملات الموسمية والإصدارات الخاصة، وتطوير منيو الفروع للشاشات والطباعة، وجلسات تصوير المنتجات والفيديو.</dd></div>
+    <div class="f-wide"><dt>التنفيذ</dt><dd>رائد الحربي مع فريق دولاب</dd></div>
   </dl>
 
   <!-- المشروع -->
   <section class="case-intro">
     <span class="eyebrow">المشروع</span>
-    <h2>كل موسم له بوست،<br/>وكل بوست يشبه بندر.</h2>
+    <h2>المحتوى البصري لبندر بطاطا،<br/>من السوشال إلى شاشات الفروع.</h2>
     <dl class="case-story">
-      <div><dt>التحدي</dt><dd>براند شخصيته مرحة وجمهوره واسع، ويحتاج محتوى ما يوقف: رمضان، العيد، يوم التأسيس، المباريات، والعروض.</dd></div>
-      <div><dt>الفكرة</dt><dd>أشتغل على شخصية البراند وألوانه كما هي، وأغيّر الفكرة مع كل موسم: فانوس في رمضان، ملعب في المباريات، وثلج في الشتاء.</dd></div>
-      <div><dt>النتيجة</dt><dd>حساب يتعرّف عليه المتابع من أول تمريرة، ومنيو تطوّر من نسخة 2025 إلى 2026، وصور منتجات من جلسات <strong>بدون استوديو</strong>.</dd></div>
+      <div><dt>المطلوب</dt><dd>محتوى مستمر لحسابات بندر بطاطا يواكب الأصناف الجديدة والعروض والمواسم دون أن يفقد شخصية البراند، ومنيو أوضح لشاشات الفروع.</dd></div>
+      <div><dt>الشغل</dt><dd>انطلقنا من شخصية البراند وألوانه، وبنينا لكل حملة فكرة بصرية خاصة بها، ثم طبّقناها على البوستات والستوريز. وإلى جانب السوشال طوّرنا منيو الفروع، وأخرجنا جلسات تصوير للمنتجات ومقاطع فيديو للبراند.</dd></div>
+      <div><dt>النتيجة</dt><dd>حساب بأسلوب واضح يتعرّف عليه المتابع مهما تغيّر الموسم، ومنيو 2026 على شاشات الفروع وفي المطبوعات، وصور منتجات بجودة إعلانية من جلسات <strong>بدون استوديو</strong>.</dd></div>
     </dl>
     <div class="case-links">
       <a href="../ai-gallery.html#bp">شاهد جلسة التصوير كاملة <span aria-hidden="true">←</span></a>
       <a href="../ai-gallery.html#video">شاهد مقاطع قبل وبعد <span aria-hidden="true">←</span></a>
     </div>
     <div class="case-links">
-      <span class="lbl">تعاونات بندر بطاطا من تصميمي:</span>
+      <span class="lbl">تعاونات صمّمناها لبندر بطاطا:</span>
       <a href="boulevard.html">البوليفارد</a>
       <a href="winter.html">ونتر وندرلاند</a>
       <a href="vox.html">VOX</a>
@@ -232,10 +257,10 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">السوشال ميديا</span>
-        <h2>المناسبة تتغيّر، والبطاطا في النص.</h2>
-        <p>رمضان، العيد، يوم التأسيس، مباريات المنتخب، حملات التوعية، والعروض — كل مناسبة بفكرة تخصها، والمنتج واضح في كل تصميم.</p>
+        <h2>البوستات والحملات الموسمية.</h2>
+        <p>صمّمنا بوستات تواكب كل صنف جديد وكل موسم، بأفكار متنوّعة تحمل روح بندر بطاطا المرحة.</p>
         <div class="bp-chips">
-          <span>العيد</span><span>اليوم الوطني</span><span>كأس العالم</span><span>رمضان</span><span>تندر الدجاج</span><span>وجبة الأطفال</span><span>المنتخب</span><span>حملات توعية</span>
+          <span>أصناف جديدة</span><span>تشويق</span><span>إصدارات خاصة</span><span>عروض</span><span>تندر الدجاج</span><span>وجبة الأطفال</span><span>تفاعل</span><span>حملات توعية</span>
         </div>
       </div>
       <div class="bp-marquee cols-3" id="postsMarquee" role="region" aria-label="بوستات بندر بطاطا"></div>
@@ -247,10 +272,10 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">الستوري</span>
-        <h2>ستوريز للمعلومة السريعة.</h2>
-        <p>أوقات العمل، تطبيقات التوصيل، الكاش باك، والمناسبات — رسالة وحدة في كل ستوري، تنقرا في ثانيتين.</p>
+        <h2>ستوريز التحديثات والعروض.</h2>
+        <p>صمّمنا ستوريز سريعة وخفيفة تُبقي المتابع قريباً من العروض والتحديثات اليومية، بألوان البراند وشخصيته.</p>
         <div class="bp-chips">
-          <span>عروض</span><span>أوقات العمل</span><span>برامج التوصيل</span><span>كاش باك</span><span>مناسبات</span>
+          <span>عروض</span><span>أوقات العمل</span><span>تطبيقات التوصيل</span><span>أصناف</span><span>تفاعل</span>
         </div>
       </div>
       <div class="bp-marquee cols-3 stories" id="storiesMarquee" role="region" aria-label="ستوريز بندر بطاطا"></div>
@@ -262,9 +287,9 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">المنيو</span>
-        <h2>منيو يتطوّر سنةً بعد سنة.</h2>
-        <p>من نسخة <strong>2025</strong> إلى نسخة <strong>2026</strong>: رتّبت الأصناف من جديد، ووضّحت الأسعار، وسهّلت القراءة — والروح المرحة نفسها.</p>
-        <p>مصمّم لشاشات الفروع (٥٥ و٤٣ بوصة) وللطباعة.</p>
+        <h2>منيو 2026 لشاشات الفروع والطباعة.</h2>
+        <p>طوّرنا المنيو من نسخة <strong>2025</strong> إلى نسخة <strong>2026</strong> بترتيب أوضح وقراءة أسهل.</p>
+        <p>وجهّزناه لشاشات الفروع والمطبوعات.</p>
       </div>
       <div class="bp-menu-vid">
         <figure>
@@ -277,7 +302,7 @@
         </figure>
         <figure>
           <video src="../assets/images/projects/bp/menu-vid/menu26-items.mp4" width="540" height="960" loop muted playsinline preload="metadata" aria-label="منيو بندر بطاطا 2026 — شاشة لكل صنف"></video>
-          <figcaption>كل صنف لحاله</figcaption>
+          <figcaption>شاشة لكل صنف</figcaption>
         </figure>
       </div>
     </div>
@@ -285,10 +310,10 @@
 
   <!-- تواصل -->
   <section class="case-outro">
-    <span class="eyebrow">تواصل</span>
-    <h2>براندك يحتاج محتوى يلحق المواسم؟</h2>
+    <span class="eyebrow">مشروعك القادم</span>
+    <h2>حملتك جاهزة قبل الموسم، لا بعده.</h2>
     <div class="btn-row">
-      <a href="../index.html#contact" class="btn btn-primary"><span>تواصل معي</span><span class="btn-arrow">↗</span></a>
+      <a href="../index.html#contact" class="btn btn-primary"><span>ابدأ مشروعك</span><span class="btn-arrow">↗</span></a>
       <a href="../index.html#work" class="btn btn-ghost">كل الأعمال</a>
     </div>
   </section>
@@ -296,11 +321,11 @@
   <!-- المشروع التالي -->
   <nav class="case-next" aria-label="المشروع التالي">
     <a class="next-card" href="flatty.html">
-      <span class="next-img"><img src="../assets/images/cards/flatty.jpg" width="900" height="600" alt="فلاتي باتي — برجر وبطاطس على كرسي بخلفية بنفسجية" loading="lazy" decoding="async" /></span>
+      <span class="next-img"><img src="../assets/images/cards/flatty.jpg" width="900" height="600" alt="فلاتي باتي — سماش برجر بالجبن في غلافه البنفسجي وكوب بطاطس حلزونية بشعار FlattyPatty على خلفية بنفسجية" loading="lazy" decoding="async" /></span>
       <span>
         <span class="next-label">المشروع التالي</span>
         <span class="next-title">فلاتي باتي</span>
-        <span class="next-meta">سوشال · تصوير منتجات</span>
+        <span class="next-meta">سوشال · صور المنتجات</span>
       </span>
       <span class="next-arrow" aria-hidden="true">←</span>
     </a>
@@ -327,35 +352,33 @@
         { id:'postsMarquee', cols:3, stripH:'clamp(240px,72vw,340px)', items:[
           ['social/post-000.jpg',720,900,P+'أطفال بتيجان يأكلون وجبتهم في قاعة قصر'],
           ['social/post-001.jpg',720,900,P+'يد الشخصية تضع تاجاً من البطاطس على رأس بنت'],
-          ['social/post-002.jpg',506,900,P+'بوست «تم تعبئة الكرش بالبطاط»'],
-          ['social/post-003.jpg',720,900,P+'بوست «أهلاً رمضان» والشخصية تحمل فانوساً'],
-          ['social/post-004.jpg',720,900,P+'وجه الشخصية مع كلمة «دجاج»'],
-          ['social/post-005.jpg',720,900,P+'وجه الشخصية مع سؤال «توقع إيش؟»'],
-          ['social/post-006.jpg',720,900,P+'وجه الشخصية مع كلمة «بندريتا»'],
-          ['social/post-007.jpg',720,900,P+'سلايدرز برجر على خلفية صفراء'],
-          ['social/post-008.jpg',720,900,P+'بوست «Pixel Box» لبرجر البكسل'],
+          ['social/post-002.jpg',506,900,P+'رسم الشخصية جالسة ببطن ممتلئ على خلفية صفراء'],
+          ['social/post-003.jpg',720,900,P+'بوست رمضان: الشخصية تحمل فانوساً على خلفية صفراء'],
+          ['social/post-004.jpg',720,900,P+'سلسلة تشويق لصنف الدجاج: وجه الشخصية مقرّباً'],
+          ['social/post-005.jpg',720,900,P+'سلسلة التشويق: الشخصية بتعبير متسائل'],
+          ['social/post-006.jpg',720,900,P+'سلسلة التشويق: الكشف عن اسم «بندريتا»'],
+          ['social/post-008.jpg',720,900,P+'إطلاق «Pixel Box»: برجر دجاج وعنوان بخط البكسل'],
           ['social/post-009.jpg',720,900,P+'موظف يقدّم صينية الطلب'],
-          ['social/post-010.jpg',506,900,P+'بوست «يوم بدينا» ليوم التأسيس'],
-          ['social/post-011.jpg',721,900,P+'بوست «جاكم الإعصار» للمنتخب'],
-          ['social/post-012.jpg',720,900,P+'بوست «إنت بطل» للبطاطا الذهبية'],
+          ['social/post-010.jpg',506,900,P+'بوست يوم التأسيس: الشخصية بالزي التقليدي أمام بيوت طينية'],
+          ['social/post-011.jpg',721,900,P+'بوست المنتخب: الشخصية بقميص أخضر في الملعب'],
+          ['social/post-012.jpg',720,900,P+'بوست البطاطا الذهبية: يد ترفع حبة بطاطس ذهبية بشريط بنفسجي'],
           ['social/post-013.jpg',720,900,P+'قرد صغير أمام «بوكس الجمعات» في الغابة'],
           ['social/post-014.jpg',721,900,P+'بوست توعية عن الشريط الوردي'],
           ['social/post-015.jpg',721,900,P+'الشخصية داخل الشريط الوردي'],
-          ['social/post-016.jpg',721,900,P+'بوست «قوتك في وعيك»'],
-          ['social/post-017.jpg',720,900,P+'بوست العودة للمدارس «بعد المدرسة.. يلا بندر بطاطا»'],
-          ['social/post-018.jpg',506,900,P+'بوست «مين بيفوز بالسوبر بطاطا؟»'],
-          ['social/post-019.jpg',720,900,P+'شيت ستيكرات «جمّعها وخذ بطاطا مجاناً»'],
-          ['social/post-020.jpg',506,900,P+'بوست «ساعد بندر بطاطا»'],
-          ['social/post-021.jpg',720,900,P+'علب بطاطس بجانب كرة قدم أمريكية'],
+          ['social/post-016.jpg',721,900,P+'ختام سلسلة الشريط الوردي: الشخصية خلف الشريط'],
+          ['social/post-017.jpg',720,900,P+'بوست العودة للمدارس: طفلان بحقيبتين ووجبتين على خلفية برتقالية'],
+          ['social/post-018.jpg',506,900,P+'بوست تفاعلي بين الفريق الأحمر والفريق الأصفر'],
+          ['social/post-019.jpg',720,900,P+'بطاقة جمع الستيكرات مع علبة الطلب'],
+          ['social/post-020.jpg',506,900,P+'بوست تفاعلي: الشخصية محتارة أمام ستيكرات على الجدار'],
           ['social/post-022.jpg',720,900,P+'خزائن مدرسية عليها ستيكرات USA Edition'],
           ['social/post-023.jpg',720,900,P+'الشخصية بملابس شتوية تذاكر على مكتب'],
           ['social/post-024.jpg',720,900,P+'الشخصية أمام شاشة London Fries'],
           ['social/post-025.jpg',720,900,P+'طبق London Fries على الثلج'],
         ]},
         { id:'storiesMarquee', cols:3, stripH:'clamp(300px,90vw,420px)', items:[
-          ['stories/story-000.jpg',620,1103,P+'ستوري «صرنا متوفرين في كيتا»'],
+          ['stories/story-000.jpg',620,1103,P+'ستوري إعلان التوفر على تطبيق كيتا'],
           ['stories/story-001.jpg',620,1102,P+'ستوري تطبيقات الطلب'],
-          ['stories/story-002.jpg',620,1101,P+'ستوري «تلقونا على كل هالتطبيقات»'],
+          ['stories/story-002.jpg',620,1101,P+'ستوري تطبيقات التوصيل على خلفية حمراء'],
           ['stories/story-003.jpg',620,1101,P+'ستوري شعارات تطبيقات التوصيل'],
           ['stories/story-004.jpg',620,1102,P+'ستوري أوقات العمل في العيد'],
           ['stories/story-005.jpg',620,1102,P+'ستوري أوقات العمل'],

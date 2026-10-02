@@ -5,7 +5,7 @@
   <link rel="canonical" href="https://raed-portfolio.pages.dev/projects/flatty" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>فلاتي باتي — سوشال وتصوير منتجات — رائد الحربي</title>
-  <meta name="description" content="فلاتي باتي — سماش برجر: على شعاره وألوانه بنيت النظام البصري للمحتوى، السوشال، المنيو، وجلسات تصوير المنتجات بالذكاء الاصطناعي." />
+  <meta name="description" content="النظام البصري للسوشال والحملات، والمنيو الرقمي، وصور المنتجات وجلسات التصوير لفلاتي باتي، علامة سماش برجر." />
   <meta name="theme-color" content="#0A0C0A" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="../assets/images/brand/favicon-32.png" />
@@ -15,11 +15,11 @@
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:site_name" content="رائد الحربي · كَان" />
   <meta property="og:title" content="فلاتي باتي — سوشال وتصوير منتجات" />
-  <meta property="og:description" content="النظام البصري للمحتوى والسوشال وجلسات تصوير المنتجات لسماش برجر فلاتي باتي." />
-  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/projects/flatty/flatty-hero.jpg" />
+  <meta property="og:description" content="سوشال وحملات ومنيو رقمي وصور منتجات وجلسات تصوير لعلامة السماش برجر فلاتي باتي." />
+  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/projects/flatty/flatty-hero-v2.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="فلاتي باتي — سوشال وتصوير منتجات" />
-  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/projects/flatty/flatty-hero.jpg" />
+  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/projects/flatty/flatty-hero-v2.jpg" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <style>
     .case-nav { position: fixed; top:0; inset-inline:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
@@ -138,6 +138,14 @@
     @media (max-width:640px){ .case-hero { padding-top:80px; } }
     /* السطر الذهبي الصغير فوق العنوان: خلفية خفيفة عشان ينقرا فوق أي صورة */
     .case-hero .case-eyebrow { background:rgba(10,12,10,.6); padding:4px 12px; border-radius:999px; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
+    /* الهيرو الجديد: الكوب في النص، فنغمّق اليمين عشان الكلام يقرا بوضوح */
+    .case-hero::after { background:
+        linear-gradient(to top, var(--bg) 2%, rgba(10,12,10,.6) 30%, rgba(10,12,10,.15) 60%, rgba(10,12,10,.45) 100%),
+        linear-gradient(to left, rgba(10,12,10,.82) 0%, rgba(10,12,10,.45) 38%, rgba(10,12,10,0) 62%); }
+    .case-hero img { object-position:center 38%; }
+    @media (max-width:640px){ .case-hero::after { background:linear-gradient(to top, var(--bg) 6%, rgba(10,12,10,.86) 42%, rgba(10,12,10,.3) 72%, rgba(10,12,10,.55) 100%); } }
+    /* السطر الصغير فوق العنوان صار فيه اسم العلامة بالعربي: بدون تباعد حروف عشان ما ينكسر اتصالها */
+    .case-hero .case-eyebrow { letter-spacing:0; }
   </style>
 </head>
 <body>
@@ -149,13 +157,12 @@
 
   <!-- الهيرو -->
   <header class="case-hero">
-    <img src="../assets/images/projects/flatty/flatty-hero.jpg" width="1920" height="1280" fetchpriority="high" decoding="async" alt="فلاتي باتي — برجر وكوب بطاطس على كرسي أسود بخلفية بنفسجية" />
+    <img src="../assets/images/projects/flatty/flatty-hero-v2.jpg" width="1920" height="1280" fetchpriority="high" decoding="async" alt="فلاتي باتي — سماش برجر مزدوج بالجبن في غلاف بنفسجي بجانب كوب بطاطس حلزونية يحمل شعار FlattyPatty أمام ستارة بنفسجية" />
     <div class="case-hero-inner">
-      <span class="case-eyebrow"><span class="dot"></span> سوشال · تصوير منتجات</span>
-      <h1>فلاتي باتي</h1>
+      <span class="case-eyebrow"><span class="dot"></span>  فلاتي باتي · سوشال · صور المنتجات</span>
+      <h1>برجر مسطّح،<br/>وحضور عالٍ.</h1>
       <p class="case-lede">
-        سماش برجر. أخذت شعاره وألوانه كما هي، وبنيت عليها كل شي بعدها:
-        المحتوى، المنيو، وجلسات التصوير.
+        النظام البصري للسوشال والحملات، والمنيو الرقمي، وصور المنتجات وجلسات التصوير لعلامة سماش برجر.
       </p>
       <div class="case-tags">
         <span>سوشال</span>
@@ -169,22 +176,22 @@
 
   <!-- حقائق المشروع -->
   <dl class="case-facts no-year">
-    <div class="f-client"><dt>العميل</dt><dd>فلاتي باتي — سماش برجر</dd></div>
-    <div class="f-wide"><dt>دوري</dt><dd>النظام البصري للمحتوى، السوشال، المنيو، وجلسات تصوير المنتجات بالذكاء الاصطناعي.<small>الشعار والألوان من العميل.</small></dd></div>
-    <div class="f-wide"><dt>المخرجات</dt><dd>بوستات · ستوريز ومنيو رقمي · صور منتجات · جلسات تصوير</dd></div>
+    <div class="f-client"><dt>العلامة</dt><dd>فلاتي باتي — سماش برجر</dd></div>
+    <div class="f-wide"><dt>نطاق العمل</dt><dd>النظام البصري للسوشال · بوستات العروض والحملات · المنيو الرقمي والستوريز · صور المنتجات · جلسات تصوير إعلانية</dd></div>
+    <div class="f-wide"><dt>التنفيذ</dt><dd>رائد الحربي مع فريق دولاب</dd></div>
   </dl>
 
   <!-- المشروع -->
   <section class="case-intro">
     <span class="eyebrow">المشروع</span>
-    <h2>الشعار والبنفسجي من العميل،<br/>والباقي عليّ.</h2>
+    <h2>سوشال، ومنيو، وصور منتجات<br/>على نظام بصري واحد.</h2>
     <dl class="case-story">
-      <div><dt>التحدي</dt><dd>سماش برجر عنده شعار ولون قوي، ويحتاج محتوى وصور منتجات بنفس القوة.</dd></div>
-      <div><dt>الفكرة</dt><dd>خلّيت البنفسجي بطل كل مشهد: الأكياس، الأكواب، خوذة سائق التوصيل، وحتى ملعب كرة القدم الأمريكية.</dd></div>
-      <div><dt>النتيجة</dt><dd>حساب بطابع واحد ثابت، وصور منتجات جاهزة للمنيو وتطبيقات التوصيل والحملات.</dd></div>
+      <div><dt>المطلوب</dt><dd>علامة سماش برجر تبيع عبر تطبيقات التوصيل وفي بوليفارد وورلد، وتطلق العروض والحملات باستمرار. احتاجت محتوى سوشال يواكب هذا الإيقاع ويحافظ على شكل واحد للحساب، وصوراً لمنتجاتها تصلح للمنيو والتطبيقات.</dd></div>
+      <div><dt>الشغل</dt><dd>بنينا للحساب نظاماً بصرياً يضع المنتج في مركز كل تصميم، ويُدخل ألوان العلامة في عناصر المشهد نفسها: خوذة سائق التوصيل وزيّه، وقفاز المشجّع، والخلفيات والطاولات. وعلى هذا النظام صمّمنا البوستات والستوريز والمنيو الرقمي، وأخرجنا صور المنتجات وجلسات التصوير.</dd></div>
+      <div><dt>النتيجة</dt><dd>حساب يحتفظ بشكله مع كل عرض وحملة جديدة، وصور منتجات جاهزة للمنيو وتطبيقات التوصيل والحملات.</dd></div>
     </dl>
     <div class="case-links">
-      <span class="lbl">وتعاونه مع بندر بطاطا له صفحة:</span>
+      <span class="lbl">تعاون فلاتي باتي مع بندر بطاطا:</span>
       <a href="boulevard.html">بوليفارد سيتي — USA Edition <span aria-hidden="true">←</span></a>
     </div>
   </section>
@@ -194,8 +201,8 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">السوشال ميديا</span>
-        <h2>العرض في الواجهة.</h2>
-        <p>رمضان، العيد، يوم التأسيس، الكاش باك، وعروض بوليفارد وورلد — المنتج أو العرض أول شي تشوفه في كل بوست.</p>
+        <h2>بوستات العروض والحملات.</h2>
+        <p>صمّمنا بوستات العروض والحملات بأسلوب ثابت يضع المنتج في الواجهة، مع طابع بصري خاص لكل حملة.</p>
       </div>
       <div class="reef-roll cols-3" id="rollSocial" role="region" aria-label="بوستات فلاتي باتي"></div>
     </div>
@@ -205,9 +212,9 @@
   <section class="reef-group reveal">
     <div class="bp-split">
       <div class="bp-desc">
-        <span class="eyebrow">الستوري</span>
-        <h2>ستوريز ومنيو في جيبك.</h2>
-        <p>منيو البطاطس والبرجر بأسعاره، وإعلانات التوصيل — ستوري يوصّل المعلومة قبل ما يمرّ عليها الإصبع.</p>
+        <span class="eyebrow">الستوري والمنيو</span>
+        <h2>المنيو الرقمي وستوريز التوصيل.</h2>
+        <p>صمّمنا المنيو الرقمي وستوريز التوصيل بقالب مرتّب وواضح، يحافظ على شكل الحساب مع كل عرض.</p>
       </div>
       <div class="reef-roll cols-3 stories" id="rollStories" role="region" aria-label="ستوريز فلاتي باتي"></div>
     </div>
@@ -218,8 +225,8 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">صور المنتجات</span>
-        <h2>المنتج بطل الصورة.</h2>
-        <p>لقطات نظيفة على خلفية بيضاء للساندويتشات والبطاطس — جاهزة للمنيو وتطبيقات التوصيل.</p>
+        <h2>لقطات المنيو على خلفية بيضاء.</h2>
+        <p>أخرجنا صور الأصناف على خلفية بيضاء نظيفة بإضاءة ناعمة، جاهزة للمنيو وتطبيقات التوصيل.</p>
       </div>
       <div class="reef-roll cols-2" id="rollProducts" role="region" aria-label="صور منتجات فلاتي باتي"></div>
     </div>
@@ -230,8 +237,8 @@
     <div class="bp-split">
       <div class="bp-desc">
         <span class="eyebrow">جلسات التصوير</span>
-        <h2>مشاهد بدون استوديو.</h2>
-        <p>سائق توصيل بخوذة بنفسجية، أكواب بطاطس طايرة، وبرجر على طاولة بلاط. إخراج إعلان كامل، وما احتاج ولا يوم تصوير.</p>
+        <h2>مشاهد إعلانية حول المنتج.</h2>
+        <p>أخرجنا جلسات تصوير إعلانية محورها المنتج، بمشاهد مبهجة تحمل ألوان العلامة وروحها.</p>
         <a class="shoot-link" href="../ai-gallery.html#flatty">شاهد جلسة التصوير كاملة <span aria-hidden="true">←</span></a>
       </div>
       <div class="reef-roll cols-2" id="rollSessions" role="region" aria-label="جلسات تصوير فلاتي باتي"></div>
@@ -240,10 +247,10 @@
 
   <!-- تواصل -->
   <section class="case-outro">
-    <span class="eyebrow">تواصل</span>
-    <h2>منتجك يستاهل صور بهالمستوى؟</h2>
+    <span class="eyebrow">مشروعك القادم</span>
+    <h2>منيو جديد، أو عرض للموسم؟</h2>
     <div class="btn-row">
-      <a href="../index.html#contact" class="btn btn-primary"><span>تواصل معي</span><span class="btn-arrow">↗</span></a>
+      <a href="../index.html#contact" class="btn btn-primary"><span>ابدأ مشروعك</span><span class="btn-arrow">↗</span></a>
       <a href="../index.html#work" class="btn btn-ghost">كل الأعمال</a>
     </div>
   </section>
@@ -282,7 +289,7 @@
         { id:'rollSocial', cols:3, stripH:'clamp(240px,72vw,340px)', items:[
           ['social/post-000.jpg',720,900,P+'بوست دبل تشيز برجر'],
           ['social/post-001.jpg',720,900,P+'لاعب كرة قدم أمريكية بجانب قائمة الكومبو'],
-          ['social/post-002.jpg',720,900,P+'ملعب مكتوب عليه اسم البراند'],
+          ['social/post-002.jpg',720,900,P+'ملعب مكتوب عليه اسم العلامة'],
           ['social/post-003.jpg',720,900,P+'برجر وكرة وبطاطس في السماء'],
           ['social/post-004.jpg',720,900,P+'أيادٍ ترفع البرجر وقفاز المشجعين'],
           ['social/post-005.jpg',720,900,P+'قفاز مشجعين بنفسجي في السماء'],
@@ -299,7 +306,7 @@
           ['social/post-016.jpg',720,900,P+'بوست كومبو الجمعات'],
           ['social/post-017.jpg',720,900,P+'برجر وبطاطس على طاولة'],
           ['social/post-018.jpg',900,450,P+'كومبو الجمعات على سجادة رمضانية'],
-          ['social/post-019.jpg',720,900,P+'اسم البراند بخلفية شعاعية'],
+          ['social/post-019.jpg',720,900,P+'اسم العلامة بخلفية شعاعية'],
           ['social/post-020.jpg',720,900,P+'رسمة بنت تحمل برجر — بوست العيد'],
           ['social/post-021.jpg',720,900,P+'رسمة خروف ومراجيح — بوست العيد'],
           ['social/post-022.jpg',506,900,P+'وجبة مع جوال على تطبيق جاهز'],
@@ -308,13 +315,13 @@
           ['social/post-025.jpg',720,900,P+'أصابع بطاطس على خلفية بنفسجية'],
           ['social/post-026.jpg',506,900,P+'عرض كاش باك ١٠٪ على جاهز'],
           ['social/post-027.jpg',720,900,P+'عرض كاش باك ١٠٪ — نسخة ثانية'],
-          ['social/post-028.jpg',900,450,P+'عرض «اشترِ وجبة واحصل على الثانية مجاناً»'],
-          ['social/post-029.jpg',720,900,P+'بوست We Love Smash لبرجر دبل'],
+          ['social/post-028.jpg',900,450,P+'عرض الوجبة الثانية مجاناً — بنر عريض'],
+          ['social/post-029.jpg',720,900,P+'بوست برجر سماش دبل'],
           ['social/post-030.jpg',720,900,P+'رسمة بيوت طينية — يوم التأسيس'],
           ['social/post-031.jpg',720,900,P+'عرض الوجبة الثانية مجاناً — نسخة عمودية'],
         ]},
         { id:'rollStories', cols:3, stripH:'clamp(300px,90vw,420px)', items:[
-          ['stories/story-000.jpg',620,1102,P+'ستوري «موجودين معاكم هنا» مع سائق توصيل'],
+          ['stories/story-000.jpg',620,1102,P+'ستوري إعلان التوصيل مع سائق'],
           ['stories/story-001.jpg',620,1102,P+'ستوري التوصيل الحصري على جاهز'],
           ['stories/story-002.jpg',620,1102,P+'ستوري منيو البطاطس على خلفية بنفسجية'],
           ['stories/story-003.jpg',620,1102,P+'ستوري منيو البطاطس على خلفية زرقاء'],
@@ -335,8 +342,6 @@
           ['sessions/s-01.jpg',736,1408,P+'سائق توصيل بزي بنفسجي يحمل الكيس'],
           ['sessions/s-02.jpg',768,1344,P+'سائق توصيل يقدّم الكيس للكاميرا'],
           ['sessions/s-03.jpg',768,1408,P+'سائق بخوذة يرفع الكيس — لقطة قريبة'],
-          ['sessions/s-04.jpg',1200,800,P+'أكواب بطاطس طايرة أمام جدار أزرق مموّج'],
-          ['sessions/s-05.jpg',736,1312,P+'أكواب بطاطس طايرة — لقطة عمودية'],
           ['sessions/s-06.jpg',1003,1920,P+'برجر وكوب بطاطس على طاولة بلاط بنفسجي'],
           ['sessions/s-07.jpg',1200,800,P+'برجر مغلّف على طاولة بلاط بنفسجي'],
           ['sessions/s-08.jpg',768,1408,P+'كرسي معدني بنفسجي'],

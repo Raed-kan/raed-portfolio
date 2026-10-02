@@ -5,7 +5,7 @@
   <link rel="canonical" href="https://raed-portfolio.pages.dev/projects/winter" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>بندر بطاطا × ونتر وندرلاند جدة 2025 — رائد الحربي</title>
-  <meta name="description" content="هوية التوجه الشتوي Winter Edition لبندر بطاطا في ونتر وندرلاند جدة: كوخ خشبي دافئ، نسخة شتوية من الشعار، نوافذ طلب واستلام، منيو، باكج، ويونيفورم." />
+  <meta name="description" content="هوية شتوية بطابع لندني لكوخ بندر بطاطا في ونتر وندرلاند جدة 2025: نسخة الشتاء من الشعار، والواجهة، والمنيو، والتغليف، وزي الطاقم." />
   <meta name="theme-color" content="#0A0C0A" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="../assets/images/brand/favicon-32.png" />
@@ -15,11 +15,11 @@
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:site_name" content="رائد الحربي · كَان" />
   <meta property="og:title" content="بندر بطاطا × ونتر وندرلاند جدة 2025" />
-  <meta property="og:description" content="كوخ شتوي بنسخة Winter Edition في ونتر وندرلاند جدة، بهوية تمتد من واجهة الكوخ إلى علبة البطاطا." />
-  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/collabs/winter/winter-hero.jpg" />
+  <meta property="og:description" content="هوية شتوية بطابع لندني لكوخ بندر بطاطا في ونتر وندرلاند جدة: الواجهة، والمنيو، والتغليف، وزي الطاقم." />
+  <meta property="og:image" content="https://raed-portfolio.pages.dev/assets/images/collabs/winter/winter-hero-v3.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="بندر بطاطا × ونتر وندرلاند جدة 2025" />
-  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/collabs/winter/winter-hero.jpg" />
+  <meta name="twitter:image" content="https://raed-portfolio.pages.dev/assets/images/collabs/winter/winter-hero-v3.jpg" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <style>
     /* ===== صفحة سرد المشروع ===== */
@@ -127,6 +127,25 @@
     @media (max-width:640px){ .case-hero { padding-top:80px; } }
     /* السطر الذهبي الصغير فوق العنوان: خلفية خفيفة عشان ينقرا فوق أي صورة */
     .case-hero .case-eyebrow { background:rgba(10,12,10,.6); padding:4px 12px; border-radius:999px; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
+    /* السطر الصغير فوق العنوان صار فيه اسم العلامة بالعربي: بدون تباعد حروف عشان ما ينكسر اتصالها */
+    .case-hero .case-eyebrow { letter-spacing:0; }
+    /* الهيرو الموحّد (مثل VOX وTECNO): صورة كبيرة بعرض الصفحة وظل من تحت */
+    .case-hero.hero-photo { position:relative; min-height:max(82vh,560px); display:flex; align-items:flex-end; overflow:hidden; background:#0A0C0A; padding-top:88px; }
+    .case-hero.hero-photo > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; z-index:0; }
+    .case-hero.hero-photo::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:
+        linear-gradient(to top, var(--bg) 2%, rgba(10,12,10,.72) 26%, rgba(10,12,10,.18) 56%, rgba(10,12,10,.45) 100%),
+        linear-gradient(to left, rgba(10,12,10,.55), rgba(10,12,10,0) 50%); }
+    .case-hero.hero-photo .case-hero-inner { position:relative; z-index:2; padding:0 clamp(20px,5vw,64px) clamp(44px,8vh,88px); max-width:1100px; }
+    .case-hero.hero-photo h1 { color:var(--ink); }
+    .case-hero.hero-photo .case-lede { color:var(--ink-2); }
+    .case-hero.hero-photo .case-eyebrow { color:var(--gold); background:rgba(10,12,10,.6); padding:4px 12px; border-radius:999px; }
+    .case-hero.hero-photo .case-eyebrow .dot { background:var(--gold); box-shadow:0 0 12px var(--gold); }
+    .case-hero.hero-photo .case-tags span { color:var(--ink-2); border-color:var(--line-2); background:rgba(10,12,10,.45); }
+    @media (max-width:640px){
+      .case-hero.hero-photo { min-height:max(74vh,520px); padding-top:80px; }
+      .case-hero.hero-photo > img { object-position:center 30%; }
+      .case-hero.hero-photo::after { background:linear-gradient(to top, var(--bg) 6%, rgba(10,12,10,.86) 42%, rgba(10,12,10,.3) 72%, rgba(10,12,10,.55) 100%); }
+    }
   </style>
 </head>
 <body>
@@ -137,57 +156,55 @@
   </nav>
 
   <!-- الهيرو -->
-  <header class="case-hero">
-    <img src="../assets/images/collabs/winter/winter-hero.jpg" width="1920" height="1072" fetchpriority="high" decoding="async" alt="كوخ بندر بطاطا الشتوي الوردي في ونتر وندرلاند جدة ليلاً بنافذتي الطلب والاستلام" />
+  <header class="case-hero hero-photo">
+    <img src="../assets/images/collabs/winter/winter-hero-v3.jpg" width="1920" height="1072" fetchpriority="high" decoding="async" alt="كوخ بندر بطاطا الوردي في ونتر وندرلاند جدة ليلًا: شعار «بندر بطاطا ® BANDER'S POTATO» مضيء فوق نافذتي ORDER وPICK UP، وحولها لوحة «بطاطناا جاممد» والمنيو، وثلج وأضواء دافئة" />
     <div class="case-hero-inner">
-      <span class="case-eyebrow"><span class="dot"></span> تعاون · 2025 · ونتر وندرلاند جدة</span>
-      <h1>بندر بطاطا <span class="x">×</span> ونتر وندرلاند</h1>
+      <span class="case-eyebrow"><span class="dot"></span>  بندر بطاطا × ونتر وندرلاند · تعاون 2025</span>
+      <h1>بندر بطاطا<br/>يلبس شتاء لندن.</h1>
       <p class="case-lede">
-        كوخ شتوي بنسخة Winter Edition: واجهة خشبية دافئة،
-        ونافذة للطلب ونافذة للاستلام.
+        هوية شتوية بطابع لندني لكوخ بندر بطاطا في ونتر وندرلاند جدة: الواجهة، والمنيو، والتغليف، وزي الطاقم.
       </p>
       <div class="case-tags">
-        <span>هوية التوجه</span>
+        <span>هوية الموسم</span>
         <span>واجهة الكوخ</span>
-        <span>نوافذ طلب واستلام</span>
+        <span>نافذتا الطلب والاستلام</span>
         <span>منيو</span>
-        <span>باكج</span>
-        <span>يونيفورم</span>
+        <span>تغليف</span>
+        <span>زي الطاقم</span>
       </div>
     </div>
   </header>
 
   <!-- حقائق المشروع -->
   <dl class="case-facts">
-    <div class="f-client"><dt>العميل</dt><dd>بندر بطاطا — فعالية ونتر وندرلاند جدة</dd></div>
+    <div class="f-client"><dt>التعاون</dt><dd>بندر بطاطا × ونتر وندرلاند جدة</dd></div>
     <div><dt>السنة</dt><dd>2025</dd></div>
-    <div class="f-wide"><dt>دوري</dt><dd>التوجه الشتوي وهويته كاملة: نسخة الشتاء من الشعار، واجهة الكوخ، نوافذ الطلب والاستلام، المنيو، الباكج، واليونيفورم.<small>الشعار الأصلي والشخصية من العميل.</small></dd></div>
-    <div class="f-wide"><dt>المخرجات</dt><dd>نسخة شتوية من الشعار · واجهة الكوخ · منيو · علب وأطباق · يونيفورم</dd></div>
+    <div class="f-wide"><dt>نطاق العمل</dt><dd>فكرة التعاون وهويته الشتوية: نسخة الشتاء من الشعار، وواجهة الكوخ ونافذتا الطلب والاستلام، والمنيو، وعلبة البطاطا، وطبق الصنف الموسمي، وزي الطاقم.</dd></div>
+    <div class="f-wide"><dt>التنفيذ</dt><dd>رائد الحربي مع فريق دولاب</dd></div>
   </dl>
 
   <!-- الفكرة -->
   <section class="case-intro">
-    <span class="eyebrow">الفكرة</span>
-    <h2>من الصيف الأمريكي…<br/>إلى دفء الشتاء.</h2>
+    <span class="eyebrow">المشروع</span>
+    <h2>نقلنا بندر بطاطا إلى الشتاء،<br/>بطابع لندني خفيف.</h2>
     <dl class="case-story">
-      <div><dt>التحدي</dt><dd>بعد نسخة <strong>USA Edition</strong>، البراند يدخل موسم جديد في ونتر وندرلاند جدة ويحتاج شكل يناسب الشتاء بدون ما يفقد مرحه.</dd></div>
-      <div><dt>الفكرة</dt><dd>كوخ خشبي وردي، ثلج وإضاءة دافئة، والشخصية لابسة غطاء أذن شتوي سماوي — ومعها صنف موسمي: <strong>London Fries</strong>.</dd></div>
-      <div><dt>النتيجة</dt><dd>كوخ يعلن الموسم من بعيد، والشعار الشتوي نفسه على العلب وتيشيرت الطاقم.</dd></div>
+      <div><dt>المطلوب</dt><dd>بعد النسخة الأمريكية في كشك البوليفارد، احتاجت بندر بطاطا <strong>هوية شتوية لكوخها في ونتر وندرلاند جدة</strong>، تناسب أجواء الفعالية وتحافظ على روح العلامة المرحة.</dd></div>
+      <div><dt>الشغل</dt><dd>بنينا لغة الموسم على ألوان باردة من الأزرق الداكن والسماوي، وخط بحروف يتدلّى منها الجليد، ورسومات لمعالم لندن: كشك الهاتف الأحمر، والباص، وبيغ بن، وعجلة لندن. ثم طبّقناها على نسخة الشتاء من الشعار، وواجهة الكوخ، والمنيو، وعلبة البطاطا، وطبق صنف <strong>London Fries</strong> الموسمي، وزي الطاقم.</dd></div>
+      <div><dt>النتيجة</dt><dd>كوخ يُعرف من بعيد وسط الفعالية، ولغة بصرية واحدة تجمع الواجهة والعلبة في يد الزائر وتيشيرت الطاقم.</dd></div>
     </dl>
     <div class="case-links">
-      <span class="lbl">من نفس العميل:</span>
-      <a href="bp.html">محتوى بندر بطاطا</a>
-      <a href="boulevard.html">البوليفارد</a>
+      <span class="lbl">للعلامة نفسها:</span>
+      <a href="bp.html">المحتوى والحملات</a>
+      <a href="boulevard.html">كشك البوليفارد</a>
     </div>
   </section>
 
   <!-- بلوك مميّز -->
   <section class="case-feature reveal">
     <span class="eyebrow">واجهة الكوخ</span>
-    <h3>كل شي في مكانه من أول نظرة.</h3>
+    <h3>واجهة مقسّمة بوضوح بين الطلب والاستلام.</h3>
     <p>
-      شعار التوجه فوق الكوخ، ركن تصوير على اليسار، والمنيو على اليمين، وفي النص نافذتا
-      <strong>ORDER</strong> و<strong>PICK UP</strong> — الزائر يعرف وين يطلب ووين يستلم بدون ما يسأل.
+      صمّمنا الواجهة لتُرشد الزائر من أول نظرة، وتجمع <strong>دفء الإضاءة</strong> و<strong>ثلج الشتاء</strong> في مشهد واحد.
     </p>
   </section>
 
@@ -198,35 +215,35 @@
       <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-logo.jpg" width="1600" height="1195" loading="lazy" decoding="async" alt="نسخة الشتاء من شعار بندر بطاطا والشخصية بغطاء أذن سماوي" /></figure>
       <div class="case-cap">
         <span class="case-num">01</span>
-        <h3 class="cb-title">شعار التوجه الشتوي</h3>
-        <p class="cb-desc">نسخة الشتاء من شعار بندر بطاطا: لون سماوي هادئ، والشخصية بغطاء أذن شتوي.</p>
+        <h3 class="cb-title">نسخة الشتاء من الشعار</h3>
+        <p class="cb-desc">طوّرنا نسخة شتوية من الشعار بلمسات سماوية وحروف جليدية، ترافق الموسم من العلبة إلى زي الطاقم.</p>
       </div>
     </article>
 
     <article class="case-block reveal">
-      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-friesbox.jpg" width="1600" height="1195" loading="lazy" decoding="async" alt="علبة فرايز شتوية بوجهين: كشك تلفون أحمر وشخصية المحقق" /></figure>
+      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-friesbox-v3.jpg" width="1800" height="1350" loading="lazy" decoding="async" alt="علبة بطاطا بندر بطاطا الشتوية مفتوحة ومليانة بطاطا بالصوص: كشك تلفون لندني أحمر «CHIPS NO FISH» فيه الشخصية بغطاء الأذن، وشعار «بندر بطاطا» المثلّج داخل الغطاء" /></figure>
       <div class="case-cap">
         <span class="case-num">02</span>
-        <h3 class="cb-title">علبة الفرايز</h3>
-        <p class="cb-desc">علبة بوجهين: قدّامها كشك التلفون «CHIPS NO FISH»، وظهرها شخصية المحقق.</p>
+        <h3 class="cb-title">علبة البطاطا</h3>
+        <p class="cb-desc">رسمنا لندن الشتوية على علبة بوجهين، وخبّأنا مفاجأة صغيرة تظهر عند فتح الغطاء.</p>
       </div>
     </article>
 
     <article class="case-block reveal">
-      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-londonfries.jpg" width="1600" height="1195" loading="lazy" decoding="async" alt="طبق London Fries برسومات عجلة لندن والباص الأحمر وبيغ بن" /></figure>
+      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-londonfries-v3.jpg" width="1800" height="1013" loading="lazy" decoding="async" alt="طبق London Fries الشتوي من بندر بطاطا: عجلة لندن والباص الأحمر وبيغ بن، ومكتوب عليه «LONODO FRIES» (الغلطة مقصودة ضمن الحملة) و«CHIPS NO FISH»، وفوقه بطاطا بالصوص والجبن" /></figure>
       <div class="case-cap">
         <span class="case-num">03</span>
         <h3 class="cb-title">London Fries</h3>
-        <p class="cb-desc">طبق بطابع لندني — عجلة لندن، الباص الأحمر، وبيغ بن — للصنف الموسمي.</p>
+        <p class="cb-desc">حوّلنا طبق الصنف الموسمي إلى عجلة لندن، تجمع معالم المدينة وألوان الشتاء في قطعة واحدة.</p>
       </div>
     </article>
 
     <article class="case-block reveal">
-      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-uniform.jpg" width="1600" height="1195" loading="lazy" decoding="async" alt="تيشيرت طاقم كحلي بوجهين: الشعار قدّام وجملة التوجه على الظهر" /></figure>
+      <figure class="case-figure"><img src="../assets/images/collabs/winter/winter-uniform-v3.jpg" width="1800" height="1344" loading="lazy" decoding="async" alt="تصميم زي طاقم بندر بطاطا لتعاون ونتر وندرلاند على تيشيرت أزرق بترولي: على الصدر شعار «بندر بطاطا» المثلّج ورأس الشخصية بغطاء الأذن، وعلى الظهر «بطاطناا جاممد» بحروف جليدية" /></figure>
       <div class="case-cap">
         <span class="case-num">04</span>
-        <h3 class="cb-title">اليونيفورم</h3>
-        <p class="cb-desc">تيشيرت الطاقم بوجهين: الشعار قدّام، وجملة التوجه على الظهر.</p>
+        <h3 class="cb-title">زي الطاقم</h3>
+        <p class="cb-desc">صمّمنا للطاقم تيشيرتًا بوجهين بحروف الموسم الجليدية، فيكمل الهوية نفسها من خلف النافذة.</p>
       </div>
     </article>
 
@@ -234,10 +251,10 @@
 
   <!-- تواصل -->
   <section class="case-outro">
-    <span class="eyebrow">تواصل</span>
-    <h2>موسمك الجاي يحتاج هوية؟</h2>
+    <span class="eyebrow">مشروعك القادم</span>
+    <h2>عندك كشك أو مشاركة موسمية؟</h2>
     <div class="btn-row">
-      <a href="../index.html#contact" class="btn btn-primary"><span>تواصل معي</span><span class="btn-arrow">↗</span></a>
+      <a href="../index.html#contact" class="btn btn-primary"><span>ابدأ مشروعك</span><span class="btn-arrow">↗</span></a>
       <a href="../index.html#work" class="btn btn-ghost">كل الأعمال</a>
     </div>
   </section>

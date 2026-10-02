@@ -279,6 +279,7 @@ section { padding: var(--section-pad) 0; position: relative; }
   font-weight: 700;
   font-size: clamp(26px, 3.4vw, 44px);
   line-height: 1.35;
+  text-wrap: balance; /* ما تبقى كلمة لحالها في آخر سطر */
   color: var(--ink);
 }
 .lead,
@@ -326,8 +327,8 @@ section { padding: var(--section-pad) 0; position: relative; }
   z-index: 1;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 80px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(28px, 4.5vw, 72px);
   align-items: center;
 }
 .hero-kicker {
@@ -348,12 +349,13 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 .hero-title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(30px, 4.2vw, 58px);
+  font-weight: 800;
+  /* السلوقن هو أول شي ينقرا: كبير ويملأ عموده */
+  font-size: clamp(54px, 9.4vw, 128px);
   /* العربي يحتاج تباعد أسطر أوسع، وأي letter-spacing يكسر اتصال الحروف */
-  line-height: 1.4;
+  line-height: 1.18;
   color: var(--ink);
-  margin-bottom: 16px;
+  margin-bottom: clamp(18px, 2.4vw, 30px);
   text-wrap: balance;
 }
 .hero-title .line { display: block; }
@@ -363,6 +365,9 @@ section { padding: var(--section-pad) 0; position: relative; }
   background-clip: text;
   color: transparent;
   font-weight: 800;
+  /* التدرّج يلوّن داخل صندوق السطر بس: نوسّعه عشان الحركات فوق والنقاط تحت ما تنقص */
+  padding-block: .16em .22em;
+  margin-block: -.16em -.22em;
 }
 .hero-sub {
   font-size: clamp(15px, 1.35vw, 18px);
@@ -373,6 +378,8 @@ section { padding: var(--section-pad) 0; position: relative; }
   font-weight: 300;
 }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+/* الهيرو صار نص بس (بدون صور جنبه): المحتوى بعرض مريح */
+.hero-content { max-width: 920px; }
 
 .hero-shots {
   display: grid;
@@ -601,7 +608,7 @@ section { padding: var(--section-pad) 0; position: relative; }
   transition: transform .6s var(--easing), filter .5s var(--easing);
 }
 .wcard:hover .wcard-media img { transform: scale(1.05); filter: none; }
-/* لوحات العرض بخلفية بيضاء (مثل شخصيات دافور): تظهر كاملة بدون قص */
+/* لوحات العرض بخلفية بيضاء: تظهر كاملة بدون قص */
 .wcard-media img.is-board { object-fit: contain; background: #fff; }
 .wcard-badge {
   position: absolute;
@@ -670,6 +677,9 @@ section { padding: var(--section-pad) 0; position: relative; }
   .work-grid:not(:has(.wcard[hidden])) .wcard.is-feature .wcard-body p { font-size: 16px; line-height: 1.85; max-width: 34ch; }
   .work-grid:not(:has(.wcard[hidden])) .wcard.is-feature .wcard-tags { margin-top: 10px; }
   .work-grid:not(:has(.wcard[hidden])) .wcard.is-feature .wcard-badge { font-size: 13px; padding: 4px 13px; top: 14px; inset-inline-start: 14px; }
+  /* البطاقة المميزة الثانية: الصورة يسار عشان يتنوّع الإيقاع */
+  .work-grid:not(:has(.wcard[hidden])) .wcard.is-feature.is-flip { flex-direction: row-reverse; }
+  .work-grid:not(:has(.wcard[hidden])) .wcard.is-feature.is-flip .wcard-media { border-inline-end: 0; border-inline-start: 1px solid var(--line); }
 }
 
 /* ===== 4. شعارات العملاء — شريط رفيع ===== */
@@ -901,6 +911,7 @@ section { padding: var(--section-pad) 0; position: relative; }
   /* الهيرو */
   .hero { min-height: 0; padding-block: calc(var(--header-h) + 28px) 28px; }
   .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+  .hero-title { font-size: clamp(62px, 17.5vw, 84px); }
   .hero-sub { margin-bottom: 22px; }
   .hero-cta .btn { flex: 1 1 0; padding: 14px 18px; }
   .hero-shots { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }

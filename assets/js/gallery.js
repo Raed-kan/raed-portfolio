@@ -1,5 +1,5 @@
 /* رائد · بورتفوليو · gallery.js — صفحة «جلسات التصوير والفيديو»
-   ١) تبويبات (عطور · مطاعم · منتجات · فيديو) + روابط مباشرة: #perfume #food #product #video #<slug>
+   ١) تبويبات (عطور · مطاعم · فيديو) + روابط مباشرة: #perfume #food #video #<slug>
    ٢) بطاقة لكل جلسة من window.SHOOTS، تنفتح في مكانها (وحدة بس في كل مرة)
    ٣) عارض صور كامل (RTL، سحب باللمس، Esc، حبس التركيز، قفل التمرير)
    ٤) مقارنة فيديو قبل/بعد من window.VIDEOS — تتحمّل وتشتغل بس لما تبان */
@@ -58,9 +58,9 @@
   const VIDEOS = (Array.isArray(window.VIDEOS) ? window.VIDEOS : [])
     .filter(v => v && v.slug && v.before && v.after && (v.type === 'slider' || v.type === 'side'));
 
-  const CATS = ['perfume', 'food', 'product'];
+  const CATS = ['perfume', 'food'];
   const TAB_KEYS = CATS.concat('video');
-  const PROJECT_PAGES = { reef: 'reef', osma: 'osma', flatty: 'flatty', bp: 'bp', bandreita: 'tecno' };
+  const PROJECT_PAGES = { reef: 'reef', osma: 'osma', flatty: 'flatty', bp: 'bp' };
   const FIRST_BATCH = 8;
   const IMG_BASE = 'assets/images/shoots/';
   const mqMid = window.matchMedia('(min-width: 768px)');
