@@ -748,7 +748,7 @@ section { padding: var(--section-pad) 0; position: relative; }
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
 }
-.about-text h2 { margin-bottom: 12px; }
+.about-text h2 { margin-bottom: 12px; text-wrap: balance; }
 .about-text p {
   font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.9;
@@ -768,6 +768,25 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 .about-stats bdi { color: var(--gold); font-weight: 700; font-size: 18px; }
 .about-stats .sep { color: var(--muted-2); }
+.about-cta { margin-top: 20px; }
+/* محطات: خط زمني بسيط تحت التعريف */
+.milestones { margin-top: 22px; max-width: 560px; }
+.milestones-title { font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 4px; }
+.milestones ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.milestones li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.m-when { font-size: 13px; font-weight: 500; color: var(--gold); white-space: nowrap; }
+.m-what { font-size: 14.5px; line-height: 1.6; font-weight: 300; color: var(--ink-2); }
+.m-what strong { font-weight: 600; color: var(--ink); }
+.certs { margin-top: 18px; max-width: 560px; }
+.certs-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.certs-list a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); transition: border-color .3s var(--easing), transform .3s var(--easing); }
+.certs-list a:hover { border-color: var(--line-2); transform: translateY(-2px); }
+.certs-list img { display: block; width: 100%; height: auto; }
+.certs-list span { display: block; padding: 7px 8px; font-size: 12.5px; font-weight: 500; color: var(--ink-2); text-align: center; }
+@media (max-width: 720px) {
+  .milestones li { grid-template-columns: 74px minmax(0, 1fr); gap: 10px; }
+  .m-what { font-size: 13.5px; }
+}
 .services {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
